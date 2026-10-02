@@ -62,11 +62,6 @@
       display: block;
     }
 
-    .logo {
-      max-width: 40%;
-      justify-self: center;
-    }
-
     .container {
       width: min(1120px, calc(100% - 44px));
       margin: 0 auto;
@@ -144,6 +139,7 @@
     .hero {
       position: relative;
       overflow: hidden;
+      padding: 0;
       background: linear-gradient(135deg,
         #f7f4ed 0%,
         #f5f1e8 58%,
@@ -280,6 +276,7 @@
     .section-green {
       background: var(--green);
       color: white;
+      padding: 72px 0;
     }
 
     .section-label {
@@ -449,42 +446,11 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.35);
       color: white;
       font-family: "Playfair Display", serif;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     .email:hover {
       border-color: white;
-    }
-
-    /* =========================
-       DAILY DEVOTIONS LOGO
-    ========================= */
-
-    .logo-box {
-      min-height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .logo-box strong {
-      display: block;
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 30px;
-      font-weight: 400;
-    }
-
-    .logo-box span {
-      display: block;
-      margin-top: 7px;
-      color: #b9c7bf;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
     }
 
     /* =========================
@@ -515,6 +481,10 @@
 
       .nav-links {
         display: none;
+      }
+
+      nav {
+        height: 64px;
       }
 
       .hero-grid,
@@ -549,6 +519,10 @@
         padding: 55px 0;
       }
 
+      .section-green {
+        padding: 55px 0;
+      }
+
       .about-grid {
         gap: 35px;
       }
@@ -580,7 +554,16 @@
       }
 
       nav {
-        height: 64px;
+        gap: 4px;
+      }
+
+      .nav-links {
+        gap: 18px;
+        font-size: 12px;
+      }
+
+      .nav-button {
+        padding: 7px 12px;
       }
 
       .logo {
@@ -621,12 +604,20 @@
       }
 
       .email {
-        font-size: 20px;
+        font-size: 16px;
         word-break: break-word;
       }
 
-      .logo-box {
-        min-height: 210px;
+    }
+
+    @media (min-width: 481px) and (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        height: 64px;
+        flex-direction: row;
       }
     }
 
@@ -666,7 +657,6 @@
 
         <a href="#top" class="logo">
           Daily Steps of Faith
-          <span>Brooke Stubbs · Author</span>
         </a>
 
         <div class="nav-links">
@@ -703,7 +693,7 @@
           </h1>
 
           <div class="hero-role">
-            Christian · Mother · Writer
+            Christian · Mother · Writer · Speaker
           </div>
 
           <p class="hero-description">
@@ -887,25 +877,6 @@
 
         </div>
 
-        <div class="logo-box">
-
-          <!-- <div>
-
-              <img
-                class="logo"
-                src="images/favicon.ico"
-                alt="Daily Devotions"
-              >
-           
-
-            <strong style="font-size: 14px;">
-              Daily Steps of Faith
-            </strong> -->
-
-          </div>
-
-        </div>
-
       </div>
     </section>
 
@@ -922,7 +893,7 @@
       </span>
 
       <span>
-        Christian · Mother · Writer
+        Christian · Mother · Writer · Speaker
       </span>
 
     </div>
